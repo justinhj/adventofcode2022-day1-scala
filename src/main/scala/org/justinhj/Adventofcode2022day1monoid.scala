@@ -33,8 +33,7 @@ object Adventofcode2021day1monoid extends App {
             || x.rightBoundary == false 
             || y.leftBoundary == false 
             || y.rightBoundary == false)) {
-        if(current.isEmpty) PenguinGrouper(0, x.groups ++ y.groups, leftBoundary, rightBoundary)
-        else PenguinGrouper(0, x.groups ++ y.groups :+ current, leftBoundary, rightBoundary)
+        PenguinGrouper(0, x.groups ++ y.groups :+ current, leftBoundary, rightBoundary)
       } else {
         PenguinGrouper(current, x.groups ++ y.groups, leftBoundary, rightBoundary)
       }
